@@ -8,7 +8,7 @@ resource "aws_instance" "vm_a" {
     ami = "ami-066784287e358dad1"
 count= 2
     tags = {
-      Name="production"
+      Name="dev"
     }
 }
 ###########
