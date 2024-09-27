@@ -5,7 +5,7 @@ provider "aws" {
 
 
 resource "aws_instance" "vm_a" {
-  instance_type = "t2.micro"
+  instance_type = "t3.micro"
   ami           = "ami-037774efca2da0726"
   tags = {
     Name = "Prod"
