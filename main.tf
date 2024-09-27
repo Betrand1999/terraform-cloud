@@ -4,24 +4,9 @@ provider "aws" {
 }
 
 
-terraform {
-  cloud {
-
-    organization = "my-terraform-cloud-organization"
-
-    workspaces {
-      name = "my-workspace"
-    }
-  }
-}
-
-
-
-
-
 resource "aws_instance" "vm_a" {
-  instance_type = "t3.micro"
-  ami           = "ami-066784287e358dad1"
+  instance_type = "t2.micro"
+  ami           = "ami-037774efca2da0726"
   tags = {
     Name = "Prod"
   }
