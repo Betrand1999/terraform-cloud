@@ -29,4 +29,4 @@ resource "aws_instance" "vm_a" {
 output "vm_info" {
   value = aws_instance.vm_a.arn
 }
-###
+#####
