@@ -1,17 +1,23 @@
-provider "aws" {
-  region = "us-east-2"
-
-}
-
-
-resource "aws_instance" "vm_a" {
-  instance_type = "t2.micro"
-  ami           = "ami-037774efca2da0726"
-  tags = {
-    Name = "Prod"
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "5.73.0"
+    }
   }
 }
-output "vm_info" {
-  value = aws_instance.vm_a.arn
+
+provider "aws" {
+  region = "us-east-1"
 }
-#####
+
+terraform {
+  cloud {
+
+    organization = "my-terraform-cloud-organization"
+
+    workspaces {
+      name = "my-workspace"
+    }
+  }
+}
