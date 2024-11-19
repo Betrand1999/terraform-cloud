@@ -11,13 +11,8 @@ provider "aws" {
   region = "us-east-1"
 }
 
-terraform {
-  cloud {
+resource "aws_instance" "vm_1" {
+  ami           = "ami-012967cc5a8c9f891"
+  instance_type = "t2.micro"
 
-    organization = "my-terraform-cloud-organization"
-
-    workspaces {
-      name = "my-workspace"
-    }
-  }
 }
