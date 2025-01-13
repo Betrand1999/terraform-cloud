@@ -1,1 +1,4 @@
 token.pem
+errored.tfstate 
+.terraform.lock.hcl
+.terraform 

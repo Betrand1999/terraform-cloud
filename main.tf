@@ -16,3 +16,14 @@ resource "aws_instance" "vm_4" {
   instance_type = "t3.micro"
 
 }
+
+terraform {
+  cloud {
+
+    organization = "my-terraform-cloud-organization"
+
+    workspaces {
+      name = "my-workspace"
+    }
+  }
+}
