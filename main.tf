@@ -17,15 +17,13 @@ resource "aws_instance" "vm_4" {
 
 }
 
-terraform {
-  cloud {
+terraform { 
+  cloud { 
+    
+    organization = "my-organization-a" 
 
-    organization = "my-terraform-cloud-organization"
-
-    workspaces {
-      name = "my-workspace"
-    }
-  }
+    workspaces { 
+      name = "my-workspace" 
+    } 
+  } 
 }
-
-# #
